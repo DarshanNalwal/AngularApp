@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default" style="background-color: powderblue;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand"><img class="rounded-circle" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.icon-icons.com%2Ficons2%2F512%2FPNG%2F512%2Fangularjs_icon-icons.com_50952.png&f=1&nofb=1" width="30" height="30" alt="img"><b> MyAngularApp</b></a>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron text-center" style="background-color: powderblue;">
+    <h1>Welcome to MyAngularApp</h1>
+</div>
+
+<form class="form">
+    <div class="container p-3 col-offset-3 col-4">
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+            <div *ngIf="errorFlag">
+                <small class="error-message">The username/password is incorrect</small>
+            </div>
+        </div>
+        <div class="checkbox row pl-3 pr-3">
+            <label><input type="checkbox" name="rememberFlag" [(ngModel)]="rememberFlag"> Remember me</label>
+            <hr>
+            <div class="p-1 right-align"><a href="#">Forgot Password?</a></div>
+        </div>
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-default text-center" (click)="LoginDetails()">Login</button>
+            
+        </div>
+        <div class="p-2" style="text-align: center;">Don't have an account yet? <a href="/register" style="text-align: center;">Click here to Register</a></div>
+        
+    </div>
+    
+</form>

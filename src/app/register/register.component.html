@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default" style="background-color: powderblue;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand"><img class="rounded-circle" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.icon-icons.com%2Ficons2%2F512%2FPNG%2F512%2Fangularjs_icon-icons.com_50952.png&f=1&nofb=1" width="30" height="30" alt="img"><b> MyAngularApp</b></a>
+        </div>
+        <ul class="nav navbar-right">
+            <li class="active pl-3"><div class="btn btn-default" (click)="Auth()">Login</div></li>
+        </ul>
+    </div>
+</nav>
+<div class="jumbotron text-center" style="background-color: powderblue;">
+    <h1>Sign up to MyAngularApp</h1>
+</div>
+
+<form>
+    <div class="container p-3 col-offset-3 col-4">
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <div class="input-group">
+                
+                <input type="email" class="form-control" id="email" placeholder="Your Email" pattern="[a-zA-Z0-9]+">
+                <div class="input-group-append">
+                    <span class="input-group-text">@nl.abnamro.com</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Confirm Password:</label>
+            <input type="password" class="form-control" placeholder="Confirm Password">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
+        </div>
+        <div style="text-align: center;">
+            <button type="register" class="btn btn-default text-center" (click)="Auth()">Register</button>   
+        </div>
+        
+    </div>
+    
+</form>
